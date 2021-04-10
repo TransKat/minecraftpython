@@ -16,14 +16,27 @@ from noise_gen import NoiseGen
 TICKS_PER_SEC = 120
 version = "alpha 0.06"
 
-
+GRAVITY = 20.0
+MAX_JUMP_HEIGHT = 1.0 # About the height of a block.
 print(f"\n\nCopyright (c) 2021 Kat\n\nMinecraft Python {version}")
-menu = input("Main Menu\n\nPlay\n\nExit\n\n")
+menu = input("Main Menu\n\nPlay (default gravity and jump height)\n\nPlayM (change jump height and gravity)\n\nExit\n\n")
 
 if menu == "exit":
 	exit()
 elif menu == "Exit":
 	exit()
+elif menu == "playm":
+	gval = int(input("Gravity (default 20.0) "))
+	GRAVITY = gval
+	if gval < 0:
+		print("Must be greater than or equal to zero. Defaulting to 20.")
+		GRAVITY = 20
+	jh = int(input("Jump height (default 1.0) "))
+	MAX_JUMP_HEIGHT = jh
+	if jh < 1:
+		print("Must be above zero. Defaulting to 1.")
+		MAX_JUMP_HEIGHT = 1
+
 else:
 	print("\n")
 
@@ -54,8 +67,6 @@ CROUCH_SPEED = 2
 SPRINT_SPEED = 7
 SPRINT_FOV = SPRINT_SPEED / 2
 
-GRAVITY = 20.0
-MAX_JUMP_HEIGHT = 1.0 # About the height of a block.
 # To derive the formula for calculating jump speed, first solve
 #    v_t = v_0 + a * t
 # for the time at which you achieve maximum height, where a is the acceleration
