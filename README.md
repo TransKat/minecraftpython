@@ -15,5 +15,5 @@ py minecraft.py
 
 # Screenshots
 
-![House][house.png]
-![Boat][boat.png]
+! [House][house.png]
+! [Boat][boat.png]
