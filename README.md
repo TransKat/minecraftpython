@@ -6,8 +6,8 @@ Open to pull requests
 To run, install pyglet and Python 3.
 Go the the project's directory and open a terminal or command prompt.
 
-#macOS and Linux
+# macOS and Linux
 python3 minecraft.py
 
-#Windows
+# Windows
 py minecraft.py
