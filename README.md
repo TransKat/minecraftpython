@@ -15,5 +15,5 @@ py minecraft.py
 
 # Screenshots
 
-! [House](https://github.com/TransKat/minecraftpython/house.png)
-! [Boat](https://github.com/TransKat/minecraftpython/boat.png)
+![House](https://github.com/TransKat/minecraftpython/house.png)
+![Boat](https://github.com/TransKat/minecraftpython/boat.png)
