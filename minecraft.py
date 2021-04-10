@@ -17,7 +17,7 @@ TICKS_PER_SEC = 120
 version = "alpha 0.06"
 
 
-print(f"\n\nJN Software LLC.\n\nMinecraft Python {version}")
+print(f"\n\nCopyright (c) 2021 Kat\n\nMinecraft Python {version}")
 menu = input("Main Menu\n\nPlay\n\nExit\n\n")
 
 if menu == "exit":
