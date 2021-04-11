@@ -1,5 +1,6 @@
 # MCPY
 Minecraft, but made in Python 3 and pyglet.
+Offical development is done in Fedora 34.
 Open to pull requests
 
 
