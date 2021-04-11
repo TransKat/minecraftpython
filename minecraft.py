@@ -18,7 +18,7 @@ version = "alpha 0.06"
 
 GRAVITY = 20.0
 MAX_JUMP_HEIGHT = 1.0 # About the height of a block.
-print(f"\n\nCopyright (c) 2021 Kat\n\nMinecraft Python {version}")
+print(f"\n\nCopyright (c) 2021 Kat\n\nMinecraft Python {version}\n\n Want to help with development? Go to https://github.com/TransKat/minecraftpython/!")
 menu = input("Main Menu\n\nPlay (default gravity and jump height)\n\nPlayM (change jump height and gravity)\n\nExit\n\n")
 
 if menu == "exit":
