@@ -15,11 +15,14 @@ from noise_gen import NoiseGen
 
 TICKS_PER_SEC = 120
 version = "alpha 0.06"
+remove = pyglet.media.load('break.wav')
+add = pyglet.media.load('place.wav')
 
+TERMINAL_VELOCITY = 50
 GRAVITY = 20.0
 MAX_JUMP_HEIGHT = 1.0 # About the height of a block.
-print(f"\n\nCopyright (c) 2021 Kat\n\nMinecraft Python {version}\n\n Want to help with development? Go to https://github.com/TransKat/minecraftpython/!")
-menu = input("Main Menu\n\nPlay (default gravity and jump height)\n\nPlayM (change jump height and gravity)\n\nExit\n\n")
+print(f"\n\nCopyright (c) 2021 Kat\n\nMinecraft Python {version}\n\nWant to help with development? Go to https://github.com/TransKat/minecraftpython/!")
+menu = input("\nMain Menu\n\nPlay (default options)\n\nPlayM (Custom settings)\n\nExit\n\n")
 
 if menu == "exit":
 	exit()
@@ -36,6 +39,11 @@ elif menu == "playm":
 	if jh < 1:
 		print("Must be above zero. Defaulting to 1.")
 		MAX_JUMP_HEIGHT = 1
+	tv = int(input("Terminal Velocity (default 50) "))
+	TERMINAL_VELOCITY = tv
+	if tv < 0:
+		print("Must be greater than or equak to 0. Defaulting to 50.")
+		TERMINAL_VELOCITY = 50
 
 else:
 	print("\n")
@@ -75,7 +83,7 @@ SPRINT_FOV = SPRINT_SPEED / 2
 # Use t and the desired MAX_JUMP_HEIGHT to solve for v_0 (jump speed) in
 #    s = s_0 + v_0 * t + (a * t^2) / 2
 JUMP_SPEED = math.sqrt(2 * GRAVITY * MAX_JUMP_HEIGHT)
-TERMINAL_VELOCITY = 50
+
 
 # Player variables
 PLAYER_HEIGHT = 2
@@ -260,6 +268,7 @@ class Model(object):
                             for lx in xrange(x + -2, x + 3): 
                                 for ly in xrange(3):
                                     self.add_block((lx, leafh + ly, lz), LEAF, immediate=False)
+
 
     def hit_test(self, position, vector, max_distance=8):
         """ Line of sight search from current position. If a block is
