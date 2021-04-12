@@ -19,3 +19,4 @@ py minecraft.py
 
 ![House](https://github.com/TransKat/minecraftpython/blob/main/house.png)
 ![Boat](https://github.com/TransKat/minecraftpython/blob/main/boat.png)
+![House and Bridge](https://user-images.githubusercontent.com/61893437/114472412-c583c600-9bb7-11eb-8a8d-8484ab31c3e5.png)
