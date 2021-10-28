@@ -14,7 +14,7 @@ from pyglet.window import key, mouse
 from noise_gen import NoiseGen
 
 TICKS_PER_SEC = 120
-version = "alpha 0.06"
+version = "alpha 0.06-1"
 remove = pyglet.media.load('break.wav')
 add = pyglet.media.load('place.wav')
 
