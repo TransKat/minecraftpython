@@ -5,6 +5,9 @@ Minecraft, but made in Python 3 and pyglet.
 To run, install pyglet and Python 3.
 Go the the project's directory and open a terminal or command prompt.
 
+Or run the compiled binaries in the releases page. No Mac binary because I don't give my weekly paycheck to Apple. 
+If you want to compile one for the project, contact me.
+
 # macOS and Linux
 python3 minecraft.py
 
