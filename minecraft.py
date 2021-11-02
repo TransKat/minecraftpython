@@ -14,7 +14,7 @@ from pyglet.window import key, mouse
 from noise_gen import NoiseGen
 
 TICKS_PER_SEC = 120
-version = "alpha 0.06-1"
+version = "alpha 0.07"
 remove = pyglet.media.load('break.wav')
 add = pyglet.media.load('place.wav')
 
@@ -51,8 +51,16 @@ else:
 wtype = input("World type\n\nflat\n\ndefault\n\nocean\n")
 
 
-
-seed = int(input("Seed "))
+csval = input("Use custom seed? y/n ")
+if csval == "y" or csval == "Y":
+    seed = int(input("Seed "))
+    print("Using custom seed.")
+elif csval == "n" or csval == "N":
+    seed = random.randint(-10000000, 1000000)
+    print("No custom seed.")
+else:
+    print("Invalid input. Defaulting to random seed.")
+    seed = random.randint(-10000000, 1000000)
 size = random.randint(12,36) * 8
 if wtype == "flat":
 	seed = 56465454654546545645465
