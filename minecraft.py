@@ -14,7 +14,7 @@ from pyglet.window import key, mouse
 from noise_gen import NoiseGen
 
 TICKS_PER_SEC = 120
-version = "alpha 0.07"
+version = "release 1.0"
 
 
 TERMINAL_VELOCITY = 50
