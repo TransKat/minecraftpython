@@ -15,6 +15,11 @@ python3 minecraft.py
 py minecraft.py
 
 
+# Building
+To compile, install the PyInstaller Python module.
+Then, go to the file directory.
+Run python -m PyInstaller --onefile ./minecraft.py ./noise_gen.py
+
 # Screenshots
 
 ![House](https://github.com/TransKat/minecraftpython/blob/main/house.png)
