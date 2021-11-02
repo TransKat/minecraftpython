@@ -15,8 +15,7 @@ from noise_gen import NoiseGen
 
 TICKS_PER_SEC = 120
 version = "alpha 0.07"
-remove = pyglet.media.load('break.wav')
-add = pyglet.media.load('place.wav')
+
 
 TERMINAL_VELOCITY = 50
 GRAVITY = 20.0
