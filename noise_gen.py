@@ -1,6 +1,9 @@
 import random as rand 
 import math
 
+noiseParamOffset = int(rand.randint(3,15))
+print(noiseParamOffset)
+
 class NoiseParameters:
     def __init__(self, octaves, amplitude, smoothness, roughness, heightOffset):
         self.octaves = octaves
@@ -61,4 +64,4 @@ class NoiseGen:
 
         result = (((totalValue / 2.1) + 1.2) * self.noiseParams.amplitude) + self.noiseParams.heightOffset
 
-        return (totalValue / 5) + self.noiseParams.heightOffset
+        return (totalValue / noiseParamOffset) + self.noiseParams.heightOffset
