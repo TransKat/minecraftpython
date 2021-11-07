@@ -14,18 +14,16 @@ from pyglet.window import key, mouse
 from noise_gen import NoiseGen
 
 TICKS_PER_SEC = 120
-version = "release 1.0"
+version = "release 1.1"
 
 
 TERMINAL_VELOCITY = 50
 GRAVITY = 20.0
 MAX_JUMP_HEIGHT = 1.0 # About the height of a block.
-print(f"\n\nCopyright (c) 2021 Kat\n\nMinecraft Python {version}\n\nWant to help with development? Go to https://github.com/TransKat/minecraftpython/!")
+print(f"\n\nMinecraft Python {version}\n\nLicensed under the GNU GPL v3 License. This is Free and Open Source Software.")
 menu = input("\nMain Menu\n\nPlay (default options)\n\nPlayM (Custom settings)\n\nExit\n\n")
 
-if menu == "exit":
-	exit()
-elif menu == "Exit":
+if menu == ["exit","Exit"]:
 	exit()
 elif menu == "playm":
 	gval = int(input("Gravity (default 20.0) "))
