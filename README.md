@@ -11,7 +11,7 @@ If you want to compile one for the project, contact me.
 # Building
 To compile, install the PyInstaller Python module.
 Then, go to the file directory.
-Run python -m PyInstaller --onefile ./minecraft.py ./noise_gen.py
+Run `python3 -m PyInstaller --onefile ./minecraft.py ./noise_gen.py`
 
 # Screenshots
 
