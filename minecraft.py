@@ -40,9 +40,9 @@ elif menu == "playm":
 	tv = int(input("Terminal Velocity (default 50) "))
 	TERMINAL_VELOCITY = tv
 	if tv < 0:
-		print("Must be greater than or equak to 0. Defaulting to 50.")
+		print("Must be greater than or equal to 0. Defaulting to 50.")
 		TERMINAL_VELOCITY = 50
-	treeDensity = int(input("Tree density (default 990) "))
+	treeDensity = int(input("Tree density (default 1) "))
    # if treeDensity > 995:
    #     print("Cannot be bigger than 995. Defaulting to 990.")
    #     treeDensity = 990
