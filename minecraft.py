@@ -20,6 +20,7 @@ version = "release 1.1"
 TERMINAL_VELOCITY = 50
 GRAVITY = 20.0
 MAX_JUMP_HEIGHT = 1.0 # About the height of a block.
+treeDensity = 1
 print(f"\n\nMinecraft Python {version}\n\nLicensed under the GNU GPL v3 License. This is Free and Open Source Software.")
 menu = input("\nMain Menu\n\nPlay (default options)\n\nPlayM (Custom settings)\n\nExit\n\n")
 
@@ -41,6 +42,13 @@ elif menu == "playm":
 	if tv < 0:
 		print("Must be greater than or equak to 0. Defaulting to 50.")
 		TERMINAL_VELOCITY = 50
+	treeDensity = int(input("Tree density (default 990) "))
+   # if treeDensity > 995:
+   #     print("Cannot be bigger than 995. Defaulting to 990.")
+   #     treeDensity = 990
+   # elif treeDensity < 100:
+   #     print("Cannot be less than 100. Defaulting to 990.")
+   #     treeDensity = 990
 
 else:
 	print("\n")
@@ -63,11 +71,11 @@ if wtype == "flat":
 	seed = 56465454654546545645465
 elif wtype == "ocean":
 	seed = 34209875093487598732048959208347
-print(f"Seed: {seed}\nSize: {size}x{size}")
+else:
+    wtype = "default"
+print(f"Seed: {seed}\nSize: {size}x{size}\nWorld Type: {wtype}")
 
 
-
-# Note: run from command line, not here
 
 
 # Size of sectors used to ease block loading.
@@ -262,7 +270,8 @@ class Model(object):
                     self.add_block((x, y, z), DIRT, immediate=False)
                 #Maybe add tree at this (x, z)
                 if (h > 20):
-                    if random.randrange(0, 1000) > 990:
+                   # if random.randrange(1, 1000) > 990:
+                    if random.randrange(treeDensity, 1000) > 990:
                         treeHeight = random.randrange(5, 7)
                         #Tree trunk
                         for y in xrange(h + 1, h + treeHeight):
